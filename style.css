@@ -1,0 +1,226 @@
+
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7f5;
+    color: #263238;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* Conteúdo */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #dcebe5;
+    color: #234b3c;
+    text-align: center;
+    padding: 45px 15px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 19px;
+}
+
+/* Menu */
+nav {
+    background-color: #315c4b;
+    padding: 15px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Seções */
+section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+h2 {
+    color: #315c4b;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #315c4b;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.introducao {
+    text-align: center;
+}
+
+.descricao {
+    margin-bottom: 25px;
+}
+
+/* Organização dos cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+/* Card individual */
+.card {
+    background-color: #e5eee9;
+    border: 1px solid #c5d8cc;
+    border-left: 5px solid #56836d;
+    border-radius: 10px;
+    padding: 25px;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+/* Ícones */
+.icone {
+    display: block;
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    margin-bottom: 15px;
+}
+
+.card strong {
+    color: #315c4b;
+    font-size: 16px;
+}
+
+/* Seção sobre */
+.sobre {
+    background-color: #e5eee9;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+/* Botão */
+.botao {
+    display: inline-block;
+    background-color: #315c4b;
+    color: white;
+    text-decoration: none;
+    padding: 13px 24px;
+    border-radius: 7px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.botao:hover {
+    background-color: #234333;
+    text-decoration: underline;
+}
+
+/* Foco de acessibilidade */
+a:focus-visible {
+    outline: 3px solid #d28b24;
+    outline-offset: 4px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #315c4b;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 850px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    body {
+        font-size: 17px;
+    }
+
+    .sobre {
+        padding: 22px;
+    }
+
+    .botao {
+        display: block;
+        text-align: center;
+    }
+}
+
+/* Respeita a preferência por movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .card {
+        transition: none;
+    }
+
+    .card:hover {
+        transform: none;
+    }
+}
